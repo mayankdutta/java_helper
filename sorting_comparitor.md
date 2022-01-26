@@ -51,3 +51,48 @@ class Solution {
     }
 }
 ```
+
+[problem](https://www.hackerrank.com/challenges/java-bigdecimal/problem?isFullScreen=true)
+### method 2
+
+```java
+import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.Scanner;
+
+class Pair {
+    BigDecimal first;
+    int second;
+
+    Pair(StringBuilder first, int second) {
+        this.first = new BigDecimal(String.valueOf(first));
+        this.second = second;
+    }
+}
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        ArrayList<StringBuilder> ans = new ArrayList<>();
+        int n = in.nextInt();
+        for (int i = 0; i < n; i++) {
+            ans.add(new StringBuilder(in.next()));
+        }
+
+        ArrayList<Pair> arr = new ArrayList<>();
+        for (int i = 0; i < n; i++) {
+            arr.add(new Pair(ans.get(i), i));
+        }
+
+        arr.sort(new Comparator<Pair>() {
+            public int compare(Pair a, Pair b) {
+                return b.first.compareTo(a.first);
+            }
+        });
+        for (Pair i : arr) {
+            System.out.println(ans.get(i.second));
+        }
+    }
+}
+```
