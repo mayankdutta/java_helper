@@ -7,7 +7,7 @@ public boolean wordPattern(String pattern, String str) {
       return false;
 
     Map index = new HashMap();
-    for (int i = 0; i < words.length; ++i)
+    for (int i = 0; i < words.length; ++i) {
       /*
        * a single map used as
        * (string, int)
@@ -18,3 +18,4 @@ public boolean wordPattern(String pattern, String str) {
 
     return true;
   }
+}

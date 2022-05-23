@@ -1,8 +1,11 @@
-```java
+/*
+ * problem: https://www.hackerrank.com/challenges/minimum-distances/problem?isFullScreen=false
+ */
+
 import java.util.Map;
 import java.util.Scanner;
 
-import java.util.*;  
+import java.util.*;
 
 class Solution {
   public static void main(String args[]) {
@@ -27,9 +30,3 @@ class Solution {
 
   }
 }
-```
-
-
-/*
- * problem: https://www.hackerrank.com/challenges/minimum-distances/problem?isFullScreen=false
- */
